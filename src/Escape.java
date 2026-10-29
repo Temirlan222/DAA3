@@ -44,6 +44,7 @@ public class Escape {
             seen[v] = true;
             visited++;
             stack[++top] = v;
+            direction[top] = 0;
         }
         int[] path = top < 0 ? new int[0] : java.util.Arrays.copyOf(stack, top + 1);
         return new Result(path, visited, deadEnds);
